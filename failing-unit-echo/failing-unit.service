@@ -1,0 +1,9 @@
+[Unit]
+Description=Failing systemd unit
+After=network-online.target
+OnFailure=echo@%i.service
+
+
+[Service]
+Type=oneshot
+ExecStart=/bin/false

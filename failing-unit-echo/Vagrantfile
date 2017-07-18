@@ -1,0 +1,7 @@
+Vagrant.configure("2") do |config|
+  # Ubuntu 16:04
+  config.vm.box = "ubuntu/xenial64"
+  config.vm.provision "file", source: "failing-unit.service", destination: "/tmp/failing-unit.service"
+  config.vm.provision "file", source: "echo@.service", destination: "/tmp/echo@.service"
+  config.vm.provision "shell", path: "setup.sh"
+end

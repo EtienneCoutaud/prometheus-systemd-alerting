@@ -1,0 +1,7 @@
+
+[Unit]
+Description=Display failing unit name
+
+[Service]
+Type=oneshot
+ExecStart=/bin/echo "parent service : %i"
